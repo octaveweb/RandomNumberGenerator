@@ -17,7 +17,7 @@ if (playGame) {
   submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const guess = parseInt(userInput.value);
-    console.log(guess);
+    // console.log(guess);
     validation(guess);
   });
 }

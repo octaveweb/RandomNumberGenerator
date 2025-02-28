@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Random Number Generator </title>
+</head>
+<body>
+    <section id="wrapper">
+        <div class="contener">
+     <div class="c-1">
+        <p >Previous Guesses:</p>
+        <span class="guesses">
+           
+        </span>
+     </div>
+          <form class="form">
+              <label for="guessField" id="guess">Guess a number</label>
+              <input type="text" id="guessField" class="guessField">
+              <div class="b-con">
+              <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+
+              </div>
+              <p class="lowOrHi"></p>
+
+          </form>
+  
+          <div class="resultParas">
+              <p >Guesses Remaining: <span class="lastResult">10</span></p>
+              
+          </div>
+        </div>
+      </section>
+
+
+      <section class="overlay" id="landpage">
+        <div class="sl-1" id="cord_1">
+            <h1  class="und" id="titelIntro">Number guessing game</h1>
+            <div id="rull">
+                <p class="tag tg-col">Rull's</p>
+                
+                
+                <div class="rulls">
+                    <span>-Try and guess a random number between 1 and 100.</span>
+                    <span>-You have 10 attempts to guess the right number.</span>
+                </div>
+                
+            </div>
+            <button type="button" class="btn" id="Contunue">Contunue</button>
+        </div>
+        <div class="number-fall">
+            
+        </div>
+      </section>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="js/script.js"></script>
+      <script src="js/animation.models.js"></script>
+      <script src="js/gameData.models.js"></script>
+</body>
+</html>

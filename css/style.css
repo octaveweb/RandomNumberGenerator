@@ -1,0 +1,254 @@
+@font-face {
+  font-family: ub;
+  src: url(Ubuntu-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: ub;
+  overflow: hidden;
+}
+:root {
+  --theme: #222;
+  --light: #fff;
+  --dark: #000;
+  --tag: #0b0030;
+  --tag-col: #0008ff;
+
+  --animation-primary: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-fast: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-smooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-slow: all 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+}
+#wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--theme);
+  color: #fff;
+  font-size: 25px;
+  display: none;
+}
+.contener {
+  height: 100vh;
+  width: 100%;
+  /* padding: 0 5rem; */
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+.c-1 {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+  width: 100%;
+  /* background-color: aquamarine; */
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.contener form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+}
+#guess {
+  font-size: 55px;
+  color: #fff;
+  text-transform: capitalize;
+}
+#guessField {
+  margin: 1rem 0;
+  width: 80%;
+  height: 10vh;
+  border-radius: 15px;
+  /* outline: none; */
+  border: none;
+  text-align: center;
+  font-size: 3vw;
+
+}
+
+#subt {
+  padding: 1vw 4vw;
+  font-size: 1.5vw;
+  margin: 1vw 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.lowOrHi {
+  position: absolute;
+  bottom: 40px;
+}
+
+.guesses {
+  height: 87vh;
+  color: white;
+  /* padding: 7px; */
+  background-color: #00000015;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+.guesses p {
+  padding: 0.5rem;
+  /* background-color: red; */
+}
+.lastResult {
+  color: white;
+  padding: 7px;
+}
+.resultParas {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 2rem 2rem 0 0;
+}
+
+.resultParas p {
+  /* padding: 20px; */
+  /* transform: translate( -50%, -50%); */
+  word-wrap: break-word;
+}
+
+.b-con > * {
+  margin: 0 10px;
+}
+.b-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* //////////// OVERLAY //////////// */
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--theme);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sl-1 {
+  z-index: 5;
+}
+#cord_1 h1 {
+  font-size: 5vw;
+  padding: 1.5vw 0;
+  color: var(--light);
+  font-weight: 800;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 2;
+}
+#cord_1 span {
+  font-size: 1.5vw;
+  /* margin: .5rem 0 ; */
+  color: var(--light);
+  position: relative;
+  font-weight: 500;
+}
+#cord_1 span {
+  animation: var(--animation-smooth);
+  display: block;
+  margin: 0.5rem 0 0.5rem 10px;
+}
+#rull {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.rulls {
+  height: 15vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.tag {
+  padding: 3vw 2vw;
+  margin: 0 20px 0 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5vw;
+}
+.tg-col {
+  background-color: var(--tag);
+  color: var(--tag-col);
+}
+
+.und:hover::before {
+  animation: gofont 0.7s cubic-bezier(0.7, 0, 0.3, 1) both;
+}
+@keyframes gofont {
+  0% {
+    float: left;
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    right: 0;
+    width: 0%;
+  }
+}
+.und::before {
+  content: "";
+  height: 10px;
+  width: 0%;
+  background-color: var(--light);
+  position: absolute;
+  bottom: 10px;
+  transition: var(--animation-smooth);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.btn {
+  padding: 1vw 4vw;
+  font-size: 1.5vw;
+  margin: 1vw 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.number-fall {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+}
+.number {
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  opacity: 50%;
+  color: #fff;
+}

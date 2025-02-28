@@ -1,5 +1,5 @@
 let ranRto100 = parseInt(Math.random() * 100 + 1);
-console.log(ranRto100);
+// console.log(/ranRto100);
 
 const userInput = document.querySelector('#guessField');
 const submitBtn = document.querySelector('#subt');

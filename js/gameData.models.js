@@ -57,9 +57,9 @@ function checkGuess(guess) {
     displayMassage(`You guess it right!`);
     endGame();
   } else if (guess < ranRto100) {
-    displayMassage(`Number is Less!`);
+    displayMassage(`Number is TOO Less!`);
   } else if (guess > ranRto100) {
-    displayMassage(`Number is height!`);
+    displayMassage(`Number TOO is high!`);
   }
 }
 function displayGuesh(guess) {

@@ -99,14 +99,15 @@ function endGame() {
 function newGame() {
   const nweGameButton = document.getElementById('newGame');
   nweGameButton.addEventListener('click', (e) => {
-    ranRto100 = parseInt(Math.random() * 100 + 1);
-    previousGuess = [];
-    numGuess = 1;
-    guessSlot.innerHeight = ' no data found ';
-    guesstLeft.innerHTML = `${11- numGuess}`;
-    userInput.removeAttribute('disabled');
-    startOver.removeChild(p);
-    displayMassage("")
-    playGame = true;
+  //   ranRto100 = parseInt(Math.random() * 100 + 1);
+  //   previousGuess = [];
+  //   numGuess = 1;
+  //   guessSlot.innerHeight = ' no data found ';
+  //   guesstLeft.innerHTML = `${11- numGuess}`;
+  //   userInput.removeAttribute('disabled');
+  //   startOver.removeChild(p);
+  //   displayMassage("")
+  //   playGame = true;
+  location.reload();
   });
 }
